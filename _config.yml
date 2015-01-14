@@ -102,3 +102,9 @@ facebook_like: true
 
 # Coderwall Setup
 coderwall_user: cvquesty
+
+# Facebook likebox (for pages)
+    facebook_pagename: jerald.sheets
+    facebook_showfaces: true
+    facebook_showstream: true
+    facebook_width: 260
