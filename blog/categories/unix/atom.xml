@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Unix | Questy.org]]></title>
+  <title><![CDATA[Category: unix | Questy.org]]></title>
   <link href="http://www.questy.org/blog/categories/unix/atom.xml" rel="self"/>
   <link href="http://www.questy.org/"/>
-  <updated>2015-01-13T23:57:53-06:00</updated>
+  <updated>2015-01-14T00:10:17-06:00</updated>
   <id>http://www.questy.org/</id>
   <author>
     <name><![CDATA[Jerald Sheets]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA["Do's and Dont's" for Your Puppet Environment]]></title>
+    <title type="html"><![CDATA["Do's and Dont's" for your Puppet Environment]]></title>
     <link href="http://www.questy.org/blog/2014/05/20/dos-donts-puppet-environment/"/>
     <updated>2014-05-20T08:15:14-05:00</updated>
     <id>http://www.questy.org/blog/2014/05/20/dos-donts-puppet-environment</id>
@@ -79,7 +79,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Why All the Vim?]]></title>
+    <title type="html"><![CDATA[Why all the Vim?]]></title>
     <link href="http://www.questy.org/blog/2014/05/09/vim-2/"/>
     <updated>2014-05-09T10:07:57-05:00</updated>
     <id>http://www.questy.org/blog/2014/05/09/vim-2</id>
@@ -287,7 +287,7 @@ Conclusion</strong></em></p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[A Few Notes...]]></title>
+    <title type="html"><![CDATA[A few Notes...]]></title>
     <link href="http://www.questy.org/blog/2011/02/22/a-few-notes/"/>
     <updated>2011-02-22T09:26:06-06:00</updated>
     <id>http://www.questy.org/blog/2011/02/22/a-few-notes</id>

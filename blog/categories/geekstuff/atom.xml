@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Geekstuff | Questy.org]]></title>
+  <title><![CDATA[Category: geekstuff | Questy.org]]></title>
   <link href="http://www.questy.org/blog/categories/geekstuff/atom.xml" rel="self"/>
   <link href="http://www.questy.org/"/>
-  <updated>2015-01-13T23:57:53-06:00</updated>
+  <updated>2015-01-14T00:10:17-06:00</updated>
   <id>http://www.questy.org/</id>
   <author>
     <name><![CDATA[Jerald Sheets]]></name>
