@@ -104,7 +104,7 @@ facebook_like: true
 coderwall_user: cvquesty
 
 # Facebook likebox (for pages)
-    facebook_pagename: jerald.sheets
-    facebook_showfaces: true
-    facebook_showstream: true
-    facebook_width: 260
+facebook_pagename: jerald.sheets
+facebook_showfaces: true
+facebook_showstream: true
+facebook_width: 260
