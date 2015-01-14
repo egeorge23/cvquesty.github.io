@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Geekstuff | My Octopress Blog]]></title>
-  <link href="http://cvquesty.github.io/blog/categories/geekstuff/atom.xml" rel="self"/>
-  <link href="http://cvquesty.github.io/"/>
-  <updated>2015-01-13T23:42:55-06:00</updated>
-  <id>http://cvquesty.github.io/</id>
+  <title><![CDATA[Category: Geekstuff | Questy.org]]></title>
+  <link href="http://www.questy.org/blog/categories/geekstuff/atom.xml" rel="self"/>
+  <link href="http://www.questy.org/"/>
+  <updated>2015-01-13T23:57:53-06:00</updated>
+  <id>http://www.questy.org/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
-    
+    <name><![CDATA[Jerald Sheets]]></name>
+    <email><![CDATA[questy@questy.org]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
     <title type="html"><![CDATA[PuppetConf 2014]]></title>
-    <link href="http://cvquesty.github.io/blog/2014/09/23/puppetconf-2014/"/>
+    <link href="http://www.questy.org/blog/2014/09/23/puppetconf-2014/"/>
     <updated>2014-09-23T13:19:37-05:00</updated>
-    <id>http://cvquesty.github.io/blog/2014/09/23/puppetconf-2014</id>
+    <id>http://www.questy.org/blog/2014/09/23/puppetconf-2014</id>
     <content type="html"><![CDATA[<p>Glad to be at PuppetConf with #ShadowSoft exploring all the latest and greatest in PuppetLabs.</p>
 
 <p><img src="http://cvquesty.github.io/images/puppetconf.jpg" alt="image" /></p>
@@ -26,9 +26,9 @@
   
   <entry>
     <title type="html"><![CDATA[Southeast Puppet User's Group September]]></title>
-    <link href="http://cvquesty.github.io/blog/2014/09/11/southeast-puppet-users-group-september/"/>
+    <link href="http://www.questy.org/blog/2014/09/11/southeast-puppet-users-group-september/"/>
     <updated>2014-09-11T18:33:01-05:00</updated>
-    <id>http://cvquesty.github.io/blog/2014/09/11/southeast-puppet-users-group-september</id>
+    <id>http://www.questy.org/blog/2014/09/11/southeast-puppet-users-group-september</id>
     <content type="html"><![CDATA[<p><img src="http://cvquesty.github.io/images/puppet_docker.jpg" alt="image" /></p>
 
 <p>John Ray is bringing the Puppet + Docker goodness in his talk tonight: &ldquo;Deploying Docker Containers with Puppet&rdquo;.  Join us each month at the Shadow Soft offices for the latest in DEVOPS topics and information.  Always fun, lots of discussion and information surrounding Puppet topics and associated technologies.  There&rsquo;s always pizza and beverages of all kinds, and we&rsquo;ve finally moved into our new meeting/class rooms, so come on out.</p>
@@ -37,9 +37,9 @@
   
   <entry>
     <title type="html"><![CDATA[The Toolbox Grows...]]></title>
-    <link href="http://cvquesty.github.io/blog/2014/06/11/toolbox-grows/"/>
+    <link href="http://www.questy.org/blog/2014/06/11/toolbox-grows/"/>
     <updated>2014-06-11T11:57:18-05:00</updated>
-    <id>http://cvquesty.github.io/blog/2014/06/11/toolbox-grows</id>
+    <id>http://www.questy.org/blog/2014/06/11/toolbox-grows</id>
     <content type="html"><![CDATA[<p>So far we&rsquo;ve gotten our heads around some important things.  First and foremost, vim.  Our editor and companion for creating great code and ways to see our code in action and be able to determine at a glance whether our syntax is correct.  Also, we&rsquo;ve looked at revision control.  The single largest &ldquo;CYA&rdquo; ohmygodimgladivegotanoldercopytorestoreto sort of paradigm where you can roll yourself back to previously &ldquo;known good&rdquo; revisions to save that day&hellip;besides that, it&rsquo;s just darned good practice to keep your code externally saved, revision controlled, and accessible.</p>
 
 <p>I&rsquo;ve also talked about importance of workflow clarity and quality.  If you implement a poor workflow, you just have an automated <em>poor </em>workflow. Key word here is &ldquo;poor&rdquo;.</p>
@@ -104,9 +104,9 @@ vagrant up</p>
   
   <entry>
     <title type="html"><![CDATA[Puppet User's Group]]></title>
-    <link href="http://cvquesty.github.io/blog/2014/05/08/puppet-users-group/"/>
+    <link href="http://www.questy.org/blog/2014/05/08/puppet-users-group/"/>
     <updated>2014-05-08T18:59:35-05:00</updated>
-    <id>http://cvquesty.github.io/blog/2014/05/08/puppet-users-group</id>
+    <id>http://www.questy.org/blog/2014/05/08/puppet-users-group</id>
     <content type="html"><![CDATA[<p>Going on right now at Shadow Soft!</p>
 
 <p><a href="http://cvquesty.github.io/images/pug_robert.jpg"><img src="http://cvquesty.github.io/images/pug_robert.jpg" alt="20140508-195822.jpg" /></a></p>
@@ -117,9 +117,9 @@ vagrant up</p>
   
   <entry>
     <title type="html"><![CDATA[Vim]]></title>
-    <link href="http://cvquesty.github.io/blog/2014/05/02/vim/"/>
+    <link href="http://www.questy.org/blog/2014/05/02/vim/"/>
     <updated>2014-05-02T14:56:54-05:00</updated>
-    <id>http://cvquesty.github.io/blog/2014/05/02/vim</id>
+    <id>http://www.questy.org/blog/2014/05/02/vim</id>
     <content type="html"><![CDATA[<p><strong>Old School</strong></p>
 
 <p>Why on earth am I starting with Vim?  (or &ldquo;vi&rdquo; for you old folks)</p>

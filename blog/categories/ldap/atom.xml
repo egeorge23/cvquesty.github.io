@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Ldap | My Octopress Blog]]></title>
-  <link href="http://cvquesty.github.io/blog/categories/ldap/atom.xml" rel="self"/>
-  <link href="http://cvquesty.github.io/"/>
-  <updated>2015-01-13T23:42:55-06:00</updated>
-  <id>http://cvquesty.github.io/</id>
+  <title><![CDATA[Category: Ldap | Questy.org]]></title>
+  <link href="http://www.questy.org/blog/categories/ldap/atom.xml" rel="self"/>
+  <link href="http://www.questy.org/"/>
+  <updated>2015-01-13T23:57:53-06:00</updated>
+  <id>http://www.questy.org/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
-    
+    <name><![CDATA[Jerald Sheets]]></name>
+    <email><![CDATA[questy@questy.org]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
     <title type="html"><![CDATA[A Few Notes...]]></title>
-    <link href="http://cvquesty.github.io/blog/2011/02/22/a-few-notes/"/>
+    <link href="http://www.questy.org/blog/2011/02/22/a-few-notes/"/>
     <updated>2011-02-22T09:26:06-06:00</updated>
-    <id>http://cvquesty.github.io/blog/2011/02/22/a-few-notes</id>
+    <id>http://www.questy.org/blog/2011/02/22/a-few-notes</id>
     <content type="html"><![CDATA[<p>I think it is important to make a note about all of the people and places that have helped me ferret out a lot of this configuration.  I don&rsquo;t find this stuff in a vacuum (like anything in the Open Source world), and find it quite important to give a nod where a nod is due.</p>
 
 <p>First, to <a href="http://www.turner.com">Turner Broadcasting</a> who gave me my first shot at doing this in a relatively small environment.  There was a ton of time spent on the phone, in online forums, reading documentation, and the like.  Everything sort of proceeded from there.  I tried to get such a thing into the backend over at <a href="http://www.weather.com">The Weather Channel</a>, but the climate wasn&rsquo;t right, and there was a great deal of change going on.  Trying to implement such a thing there just wouldn&rsquo;t have worked out very well.</p>
@@ -36,9 +36,9 @@
   
   <entry>
     <title type="html"><![CDATA[LDAP Administration VI - TLS/SSL]]></title>
-    <link href="http://cvquesty.github.io/blog/2011/02/21/ldap-administration-v-tls/"/>
+    <link href="http://www.questy.org/blog/2011/02/21/ldap-administration-v-tls/"/>
     <updated>2011-02-21T14:35:34-06:00</updated>
-    <id>http://cvquesty.github.io/blog/2011/02/21/ldap-administration-v-tls</id>
+    <id>http://www.questy.org/blog/2011/02/21/ldap-administration-v-tls</id>
     <content type="html"><![CDATA[<h6>_This article goes hand in hand with &ldquo;LDAP Administration - Part I&rdquo; in regards to configuring the client. _</h6>
 
 <p>So, let&rsquo;s see where we are.  We have a master server you will be doing all administration work on.  This master server replicates to two hosts in the environment that serve LDAP queries to your clients.  These servers are replicants and are load-balanced under a VIP that is pointed to by the name you choose.  (in our case, ldap.bob.com).  You can change passwords at the client level, and have it pushed back up to master and replicated out to the environment immediately.</p>
@@ -124,9 +124,9 @@ uid=123(bob) gid=123(users) groups=123(users),456(bob)</strong></p>
   
   <entry>
     <title type="html"><![CDATA[LDAP Administration v - Replication]]></title>
-    <link href="http://cvquesty.github.io/blog/2011/02/18/ldap-administration-iv-replication/"/>
+    <link href="http://www.questy.org/blog/2011/02/18/ldap-administration-iv-replication/"/>
     <updated>2011-02-18T11:57:33-06:00</updated>
-    <id>http://cvquesty.github.io/blog/2011/02/18/ldap-administration-iv-replication</id>
+    <id>http://www.questy.org/blog/2011/02/18/ldap-administration-iv-replication</id>
     <content type="html"><![CDATA[<p>Continuing our discussion of LDAP Administration, there&rsquo;s the matter of Replication.</p>
 
 <p>So far we&rsquo;ve created an LDAP store, turned up the server, configured a client, and even connected Apache authentication to it.  However, if we&rsquo;re going to use our LDAP server for enterprise authentication, then there&rsquo;s the small matter of &ldquo;What happens when my authentication server wets the bed?&rdquo;.</p>
@@ -213,9 +213,9 @@ Two slaves configured as replicants, up and running.. check.</p>
   
   <entry>
     <title type="html"><![CDATA[LDAP Authentication IV - Apache]]></title>
-    <link href="http://cvquesty.github.io/blog/2010/08/05/ldap-authentication-for-apache/"/>
+    <link href="http://www.questy.org/blog/2010/08/05/ldap-authentication-for-apache/"/>
     <updated>2010-08-05T16:03:09-05:00</updated>
-    <id>http://cvquesty.github.io/blog/2010/08/05/ldap-authentication-for-apache</id>
+    <id>http://www.questy.org/blog/2010/08/05/ldap-authentication-for-apache</id>
     <content type="html"><![CDATA[<p>Once you&rsquo;ve got your handy LDAP server authenticating users for login throughout your environment, inevitably you find yourself getting around to the question of authentication for all your backend tools/services machines.  Can you authenticate from Apache to that same auth store to reduce administration burden across the environment?</p>
 
 <p>Yes you can.</p>
@@ -363,9 +363,9 @@ TLS_CACERTDIR /etc/openldap/cacerts</p>
   
   <entry>
     <title type="html"><![CDATA[LDAP Administration III – ‘Odds ‘n Ends’]]></title>
-    <link href="http://cvquesty.github.io/blog/2009/12/29/ldap-administration-iii-odds-n-ends/"/>
+    <link href="http://www.questy.org/blog/2009/12/29/ldap-administration-iii-odds-n-ends/"/>
     <updated>2009-12-29T05:17:46-06:00</updated>
-    <id>http://cvquesty.github.io/blog/2009/12/29/ldap-administration-iii-odds-n-ends</id>
+    <id>http://www.questy.org/blog/2009/12/29/ldap-administration-iii-odds-n-ends</id>
     <content type="html"><![CDATA[<p>By now you should have a functional LDAP server, a properly configured client, and the ability to authenticate against your server.  However, the last couple &ldquo;cogs in the wheel&rdquo; are left to manage.</p>
 
 <p>Generally speaking, when you add a user in UNIX-land, part of the process of the adduser command also sets their shell, creates a home directory for them and so forth.  As you may notice, there is no particular method to make this happen in Linux-LDAP.  You just have a store and a tool to manage the store.</p>

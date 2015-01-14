@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Linux | My Octopress Blog]]></title>
-  <link href="http://cvquesty.github.io/blog/categories/linux/atom.xml" rel="self"/>
-  <link href="http://cvquesty.github.io/"/>
-  <updated>2015-01-13T23:42:55-06:00</updated>
-  <id>http://cvquesty.github.io/</id>
+  <title><![CDATA[Category: Linux | Questy.org]]></title>
+  <link href="http://www.questy.org/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://www.questy.org/"/>
+  <updated>2015-01-13T23:57:53-06:00</updated>
+  <id>http://www.questy.org/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
-    
+    <name><![CDATA[Jerald Sheets]]></name>
+    <email><![CDATA[questy@questy.org]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
     <title type="html"><![CDATA[The Toolbox Grows...]]></title>
-    <link href="http://cvquesty.github.io/blog/2014/06/11/toolbox-grows/"/>
+    <link href="http://www.questy.org/blog/2014/06/11/toolbox-grows/"/>
     <updated>2014-06-11T11:57:18-05:00</updated>
-    <id>http://cvquesty.github.io/blog/2014/06/11/toolbox-grows</id>
+    <id>http://www.questy.org/blog/2014/06/11/toolbox-grows</id>
     <content type="html"><![CDATA[<p>So far we&rsquo;ve gotten our heads around some important things.  First and foremost, vim.  Our editor and companion for creating great code and ways to see our code in action and be able to determine at a glance whether our syntax is correct.  Also, we&rsquo;ve looked at revision control.  The single largest &ldquo;CYA&rdquo; ohmygodimgladivegotanoldercopytorestoreto sort of paradigm where you can roll yourself back to previously &ldquo;known good&rdquo; revisions to save that day&hellip;besides that, it&rsquo;s just darned good practice to keep your code externally saved, revision controlled, and accessible.</p>
 
 <p>I&rsquo;ve also talked about importance of workflow clarity and quality.  If you implement a poor workflow, you just have an automated <em>poor </em>workflow. Key word here is &ldquo;poor&rdquo;.</p>
@@ -82,9 +82,9 @@ vagrant up</p>
   
   <entry>
     <title type="html"><![CDATA["Do's and Dont's" for Your Puppet Environment]]></title>
-    <link href="http://cvquesty.github.io/blog/2014/05/20/dos-donts-puppet-environment/"/>
+    <link href="http://www.questy.org/blog/2014/05/20/dos-donts-puppet-environment/"/>
     <updated>2014-05-20T08:15:14-05:00</updated>
-    <id>http://cvquesty.github.io/blog/2014/05/20/dos-donts-puppet-environment</id>
+    <id>http://www.questy.org/blog/2014/05/20/dos-donts-puppet-environment</id>
     <content type="html"><![CDATA[<p>IT Automation, like the features and functions offered by Puppet, is riddled with a number of pitfalls. Nothing dangerous or site-threatening in the near term, however evolving a <em>bad </em>plan can lead you down a painful path to re-trek when you ultimately need to demolish what you&rsquo;ve done and re-tool, re-work, or even re-start from scratch.  Some simple suggestions can help smooth your integration, and also provide tools and methodologies that make changes in philosophy easy to test and implement as well as make the long road back from a disaster easy(-ier?) to navigate.</p>
 
 <p>Here are some simple guidelines that can provide that foundation and framework:</p>
@@ -147,9 +147,9 @@ vagrant up</p>
   
   <entry>
     <title type="html"><![CDATA[GitHub, Git, and Just Plain Revision Control]]></title>
-    <link href="http://cvquesty.github.io/blog/2014/05/13/github-git-just-plain-revision-control/"/>
+    <link href="http://www.questy.org/blog/2014/05/13/github-git-just-plain-revision-control/"/>
     <updated>2014-05-13T16:06:09-05:00</updated>
-    <id>http://cvquesty.github.io/blog/2014/05/13/github-git-just-plain-revision-control</id>
+    <id>http://www.questy.org/blog/2014/05/13/github-git-just-plain-revision-control</id>
     <content type="html"><![CDATA[<p>One of the &ldquo;bugaboos&rdquo; in the sysadmin world for the longest time was the reluctance to use those &ldquo;stinky developer tools&rdquo; in our world for any reason.  I&rsquo;m not sure the impetus behind this, but my wager is on something akin to security or yet another open port or &ldquo;attack vector&rdquo; if you will.  But today&rsquo;s competent and conscientious systems admin (not to mention DEVOPS person) will use revision control as their go-to standard for collecting, versioning, backing up, and distributing all manner of things.</p>
 
 <p>I&rsquo;ve seen some shops use <a href="http://www.nongnu.org/cvs/">CVS</a> as their choice, old thought it is, just as a large &ldquo;bucket&rdquo; in which to throw things for safekeeping with revisions and rollbacks available in case of some uncertain as yet unencountered event.  <a href="http://subversion.apache.org">Subversion</a> was the next generation of revision control tools.  Darling of developers and bane of disk space, Subversion still had many more features and performed essentially the same task.</p>
@@ -203,7 +203,7 @@ vagrant up</p>
 <p>Since Git is personal to you as a user, you need to let Git know a few things about you.  This gives your git server (in our case GitHub) the information it needs when you&rsquo;re pushing code (like your identity, default commit locations, etc).  First, your name and email:</p>
 
 <p>git config &ndash;global user.name &ldquo;John Doe&rdquo;
-git config &ndash;global user.email <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#x79;&#x6f;&#117;&#x40;&#121;&#x6f;&#x75;&#114;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;">&#121;&#x6f;&#x75;&#64;&#x79;&#x6f;&#117;&#x72;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#109;</a></p>
+git config &ndash;global user.email <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x79;&#111;&#117;&#64;&#121;&#x6f;&#x75;&#114;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#121;&#x6f;&#117;&#x40;&#x79;&#x6f;&#x75;&#114;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a></p>
 
 <p>You&rsquo;ll only need to perform this once.  There are quite a few options and you can read up on those <a href="http://git-scm.com/book/en/Getting-Started-First-Time-Git-Setup">here</a> at your leisure.</p>
 
@@ -320,9 +320,9 @@ GitHub Help</a></p>
   
   <entry>
     <title type="html"><![CDATA[Why All the Vim?]]></title>
-    <link href="http://cvquesty.github.io/blog/2014/05/09/vim-2/"/>
+    <link href="http://www.questy.org/blog/2014/05/09/vim-2/"/>
     <updated>2014-05-09T10:07:57-05:00</updated>
-    <id>http://cvquesty.github.io/blog/2014/05/09/vim-2</id>
+    <id>http://www.questy.org/blog/2014/05/09/vim-2</id>
     <content type="html"><![CDATA[<p>As we move on through the last post on Vim, you may ask yourself why I&rsquo;m remediating all the way back to text editors.  Well, as you&rsquo;ll see over time, this is all about workflow; Building yourself a detailed workflow by which you can write code, syntax check, commit to revision control, deploy to your Puppet instances, and duplicate that workflow across all your environments.</p>
 
 <p>The text editor itself, while important, is just a tiny part of a much larger picture I hope to cobble together over time.  So, let&rsquo;s begin to push forward with our coverage of Vim.</p>
@@ -365,9 +365,9 @@ GitHub Help</a></p>
   
   <entry>
     <title type="html"><![CDATA[Vim]]></title>
-    <link href="http://cvquesty.github.io/blog/2014/05/02/vim/"/>
+    <link href="http://www.questy.org/blog/2014/05/02/vim/"/>
     <updated>2014-05-02T14:56:54-05:00</updated>
-    <id>http://cvquesty.github.io/blog/2014/05/02/vim</id>
+    <id>http://www.questy.org/blog/2014/05/02/vim</id>
     <content type="html"><![CDATA[<p><strong>Old School</strong></p>
 
 <p>Why on earth am I starting with Vim?  (or &ldquo;vi&rdquo; for you old folks)</p>

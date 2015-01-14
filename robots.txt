@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://cvquesty.github.io/sitemap.xml 
+Sitemap: http://www.questy.org/sitemap.xml 

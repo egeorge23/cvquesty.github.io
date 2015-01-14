@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: General | My Octopress Blog]]></title>
-  <link href="http://cvquesty.github.io/blog/categories/general/atom.xml" rel="self"/>
-  <link href="http://cvquesty.github.io/"/>
-  <updated>2015-01-13T23:42:55-06:00</updated>
-  <id>http://cvquesty.github.io/</id>
+  <title><![CDATA[Category: General | Questy.org]]></title>
+  <link href="http://www.questy.org/blog/categories/general/atom.xml" rel="self"/>
+  <link href="http://www.questy.org/"/>
+  <updated>2015-01-13T23:57:53-06:00</updated>
+  <id>http://www.questy.org/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
-    
+    <name><![CDATA[Jerald Sheets]]></name>
+    <email><![CDATA[questy@questy.org]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
     <title type="html"><![CDATA[Workflows, Tools, and a Myriad of Gobbledygook...]]></title>
-    <link href="http://cvquesty.github.io/blog/2014/04/23/workflows-tools-myriad-gobbledygook/"/>
+    <link href="http://www.questy.org/blog/2014/04/23/workflows-tools-myriad-gobbledygook/"/>
     <updated>2014-04-23T13:17:41-05:00</updated>
-    <id>http://cvquesty.github.io/blog/2014/04/23/workflows-tools-myriad-gobbledygook</id>
+    <id>http://www.questy.org/blog/2014/04/23/workflows-tools-myriad-gobbledygook</id>
     <content type="html"><![CDATA[<p>Ok, so first let&rsquo;s cover the gobbledygook.</p>
 
 <p>I&rsquo;ve had a lot of feedback on various parts of the blog here, and I thought I&rsquo;d address a few of them here.</p>
@@ -58,9 +58,9 @@
   
   <entry>
     <title type="html"><![CDATA[A Few Notes...]]></title>
-    <link href="http://cvquesty.github.io/blog/2011/02/22/a-few-notes/"/>
+    <link href="http://www.questy.org/blog/2011/02/22/a-few-notes/"/>
     <updated>2011-02-22T09:26:06-06:00</updated>
-    <id>http://cvquesty.github.io/blog/2011/02/22/a-few-notes</id>
+    <id>http://www.questy.org/blog/2011/02/22/a-few-notes</id>
     <content type="html"><![CDATA[<p>I think it is important to make a note about all of the people and places that have helped me ferret out a lot of this configuration.  I don&rsquo;t find this stuff in a vacuum (like anything in the Open Source world), and find it quite important to give a nod where a nod is due.</p>
 
 <p>First, to <a href="http://www.turner.com">Turner Broadcasting</a> who gave me my first shot at doing this in a relatively small environment.  There was a ton of time spent on the phone, in online forums, reading documentation, and the like.  Everything sort of proceeded from there.  I tried to get such a thing into the backend over at <a href="http://www.weather.com">The Weather Channel</a>, but the climate wasn&rsquo;t right, and there was a great deal of change going on.  Trying to implement such a thing there just wouldn&rsquo;t have worked out very well.</p>
@@ -79,9 +79,9 @@
   
   <entry>
     <title type="html"><![CDATA[My Review of Roku HD Player]]></title>
-    <link href="http://cvquesty.github.io/blog/2009/12/29/my-review-of-roku-hd-player-3/"/>
+    <link href="http://www.questy.org/blog/2009/12/29/my-review-of-roku-hd-player-3/"/>
     <updated>2009-12-29T10:15:48-06:00</updated>
-    <id>http://cvquesty.github.io/blog/2009/12/29/my-review-of-roku-hd-player-3</id>
+    <id>http://www.questy.org/blog/2009/12/29/my-review-of-roku-hd-player-3</id>
     <content type="html"><![CDATA[<p><a href="http://www.roku.com/roku-products">Originally submitted at Roku</a></p>
 
 <p>The best-selling HD Player (as known as Netflix Player by Roku) plays High Definition video and connects to surround sound audio.</p>
@@ -114,9 +114,9 @@
   
   <entry>
     <title type="html"><![CDATA[A Neat Trick…]]></title>
-    <link href="http://cvquesty.github.io/blog/2009/12/17/a-neat-trick/"/>
+    <link href="http://www.questy.org/blog/2009/12/17/a-neat-trick/"/>
     <updated>2009-12-17T06:38:37-06:00</updated>
-    <id>http://cvquesty.github.io/blog/2009/12/17/a-neat-trick</id>
+    <id>http://www.questy.org/blog/2009/12/17/a-neat-trick</id>
     <content type="html"><![CDATA[<p>When you have a large environment that can and does have a number of fingers into things, there is always the possibility that something could go awry on bootup such that you cannot boot fully into the OS.  When you do this, it&rsquo;s common practice to use Grub options or a CD to boot into single-user mode and then do whatever it is you need to do.</p>
 
 <p>Sometimes, however, you get booted into single and go to edit a file, say&hellip; /etc/fstab for example, and when you open it shows as &ldquo;readonly&rdquo;.</p>
@@ -133,9 +133,9 @@
   
   <entry>
     <title type="html"><![CDATA[In Case You Haven’t Noticed…]]></title>
-    <link href="http://cvquesty.github.io/blog/2007/04/17/in-case-you-havent-noticed/"/>
+    <link href="http://www.questy.org/blog/2007/04/17/in-case-you-havent-noticed/"/>
     <updated>2007-04-17T14:47:57-05:00</updated>
-    <id>http://cvquesty.github.io/blog/2007/04/17/in-case-you-havent-noticed</id>
+    <id>http://www.questy.org/blog/2007/04/17/in-case-you-havent-noticed</id>
     <content type="html"><![CDATA[<p>We&rsquo;re at a new server out on the &lsquo;net. I&rsquo;ve moved all the websites I host out onto a data-center based server, and am removing all the extra hardware out of my home.</p>
 
 <p>Why, you might ask?</p>
@@ -144,7 +144,7 @@
 
 <p>So, I&rsquo;ve got a few things for sale.</p>
 
-<p>My house is a 3 Bedroom ranch home in suburban Atlanta, GA. You can see the pictures of my home from before I bought it in 4/04 here: <a href="http://picasaweb.google.com/questy/OurHouse">Our House</a> We&rsquo;re asking $159k. If you have any questions, contact me at <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#106;&#x65;&#114;&#97;&#x6c;&#100;&#46;&#x73;&#104;&#101;&#x65;&#116;&#x73;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#111;&#x6d;&#46;">&#106;&#101;&#x72;&#97;&#x6c;&#100;&#x2e;&#x73;&#104;&#x65;&#x65;&#x74;&#x73;&#x40;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#x6d;&#46;</a></p>
+<p>My house is a 3 Bedroom ranch home in suburban Atlanta, GA. You can see the pictures of my home from before I bought it in 4/04 here: <a href="http://picasaweb.google.com/questy/OurHouse">Our House</a> We&rsquo;re asking $159k. If you have any questions, contact me at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#x6a;&#x65;&#114;&#97;&#108;&#x64;&#46;&#115;&#104;&#101;&#101;&#x74;&#x73;&#64;&#103;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;&#46;">&#x6a;&#x65;&#x72;&#x61;&#108;&#100;&#x2e;&#x73;&#x68;&#x65;&#x65;&#x74;&#x73;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#109;&#46;</a></p>
 
 <p>Also, I&rsquo;ve got some servers hanging around. Since I&rsquo;ve really gotten into the whole Dave Ramsey thing, I&#8217;, selling them to apply toward my debt. My hope is to pay off nearly half of my remaining debt balance with the sale of my home and these servers.</p>
 
