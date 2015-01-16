@@ -621,7 +621,40 @@ end</code></pre></noscript></div>
 
 <p>When you install git on your unix-like platform, it will drop a few binaries.  The one we&rsquo;re most interested in is the git binary itself.  It&rsquo;s very simply designed and has a very straightforward set of options you can get from the command line by simply typing &ldquo;git&rdquo; with no options, or &ldquo;git help&rdquo;.  The output is below:</p>
 
-<p>[snippet id=&ldquo;32&rdquo;]</p>
+<div><script src='https://gist.github.com/20c92f9743e7a1b18ff6.js'></script>
+<noscript><pre><code>usage: git [--version] [--help] [-c name=value]
+           [--exec-path[=&lt;path&gt;]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=&lt;path&gt;] [--work-tree=&lt;path&gt;] [--namespace=&lt;name&gt;]
+           &lt;command&gt; [&lt;args&gt;]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty Git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+&#39;git help -a&#39; and &#39;git help -g&#39; lists available subcommands and some
+concept guides. See &#39;git help &lt;command&gt;&#39; or &#39;git help &lt;concept&gt;&#39;
+to read about a specific subcommand or concept.</code></pre></noscript></div>
+
 
 <p>We&rsquo;re most interested in a small subset of commands for our purposes here.  They are <strong>add, commit, pull, push, branch, checkout, and clone.</strong></p>
 
@@ -652,7 +685,7 @@ end</code></pre></noscript></div>
 <p>Since Git is personal to you as a user, you need to let Git know a few things about you.  This gives your git server (in our case GitHub) the information it needs when you&rsquo;re pushing code (like your identity, default commit locations, etc).  First, your name and email:</p>
 
 <p>git config &ndash;global user.name &ldquo;John Doe&rdquo;
-git config &ndash;global user.email <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#58;&#121;&#x6f;&#x75;&#64;&#121;&#111;&#117;&#x72;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#111;&#x75;&#64;&#121;&#111;&#117;&#x72;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#109;</a></p>
+git config &ndash;global user.email <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#121;&#x6f;&#x75;&#x40;&#x79;&#x6f;&#x75;&#x72;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;">&#121;&#111;&#117;&#x40;&#121;&#x6f;&#x75;&#114;&#x6d;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 
 <p>You&rsquo;ll only need to perform this once.  There are quite a few options and you can read up on those <a href="http://git-scm.com/book/en/Getting-Started-First-Time-Git-Setup">here</a> at your leisure.</p>
 
