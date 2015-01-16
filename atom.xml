@@ -4,7 +4,7 @@
   <title><![CDATA[Questy.org]]></title>
   <link href="http://www.questy.org/atom.xml" rel="self"/>
   <link href="http://www.questy.org/"/>
-  <updated>2015-01-15T20:11:39-06:00</updated>
+  <updated>2015-01-15T20:20:35-06:00</updated>
   <id>http://www.questy.org/</id>
   <author>
     <name><![CDATA[Jerald Sheets]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Moving my Tech Content to GitHub]]></title>
+    <title type="html"><![CDATA[Moving My Tech Content to GitHub]]></title>
     <link href="http://www.questy.org/blog/2015/01/08/moving-my-tech-content-to-github/"/>
     <updated>2015-01-08T13:39:38-06:00</updated>
     <id>http://www.questy.org/blog/2015/01/08/moving-my-tech-content-to-github</id>
@@ -263,7 +263,7 @@ end</code></pre></noscript></div>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA["Do's and Dont's" for your Puppet Environment]]></title>
+    <title type="html"><![CDATA["Do's and Dont's" for Your Puppet Environment]]></title>
     <link href="http://www.questy.org/blog/2014/05/20/dos-donts-puppet-environment/"/>
     <updated>2014-05-20T08:15:14-05:00</updated>
     <id>http://www.questy.org/blog/2014/05/20/dos-donts-puppet-environment</id>
@@ -418,7 +418,7 @@ to read about a specific subcommand or concept.</code></pre></noscript></div>
 <p>Since Git is personal to you as a user, you need to let Git know a few things about you.  This gives your git server (in our case GitHub) the information it needs when you&rsquo;re pushing code (like your identity, default commit locations, etc).  First, your name and email:</p>
 
 <p>git config &ndash;global user.name &ldquo;John Doe&rdquo;
-git config &ndash;global user.email <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#121;&#x6f;&#x75;&#x40;&#x79;&#x6f;&#x75;&#x72;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;">&#121;&#111;&#117;&#x40;&#121;&#x6f;&#x75;&#114;&#x6d;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+git config &ndash;global user.email <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#121;&#x6f;&#x75;&#64;&#x79;&#111;&#117;&#114;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#x79;&#x6f;&#x75;&#64;&#x79;&#x6f;&#117;&#x72;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a></p>
 
 <p>You&rsquo;ll only need to perform this once.  There are quite a few options and you can read up on those <a href="http://git-scm.com/book/en/Getting-Started-First-Time-Git-Setup">here</a> at your leisure.</p>
 
@@ -534,7 +534,7 @@ GitHub Help</a></p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Why all the Vim?]]></title>
+    <title type="html"><![CDATA[Why All the Vim?]]></title>
     <link href="http://www.questy.org/blog/2014/05/09/vim-2/"/>
     <updated>2014-05-09T10:07:57-05:00</updated>
     <id>http://www.questy.org/blog/2014/05/09/vim-2</id>
@@ -793,7 +793,7 @@ DO have a solid end-to-end workflow that enables rapid iteration</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Puppet V - Configuration and Scaling]]></title>
+    <title type="html"><![CDATA[Puppet v - Configuration and Scaling]]></title>
     <link href="http://www.questy.org/blog/2014/02/28/puppet-v-configuration-scaling/"/>
     <updated>2014-02-28T14:12:57-06:00</updated>
     <id>http://www.questy.org/blog/2014/02/28/puppet-v-configuration-scaling</id>
