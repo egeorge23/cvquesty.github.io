@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Wow, Squeeze for Mac ($9.95)  - Questy.org</title>
+  <title>Vagrant and Docker Love - Questy.org</title>
   <meta name="author" content="Jerald Sheets">
 
   
-  <meta name="description" content="Wow, Squeeze for Mac ($9.95) “fell off” the @MacHeist truck… get it at a 5-finger discount! http://MacHeist.com
-">
+  <meta name="description" content="Not a full-on post, but more a note for myself to both investigate and test this&hellip; It would seem that Vagrant has now added provisioner support &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.questy.org/blog/2010/02/26/wow-squeeze-for-mac-9-95-a/">
+  <link rel="canonical" href="http://www.questy.org/blog/2015/01/15/vagrant-and-docker-love/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -83,7 +82,7 @@
   
   <header>
     
-      <h1 class="entry-title">Wow, Squeeze for Mac ($9.95)</h1>
+      <h1 class="entry-title">Vagrant and Docker Love</h1>
     
     
       <p class="meta">
@@ -99,7 +98,7 @@
   
 
 
-<time datetime="2010-02-26T12:14:04-06:00" pubdate data-updated="true"></time>
+<time datetime="2015-01-15T20:31:59-06:00" pubdate data-updated="true"></time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -108,7 +107,31 @@
   </header>
 
 
-<div class="entry-content"><p>Wow, Squeeze for Mac ($9.95) “fell off” the @<a href="http://twitter.com/MacHeist">MacHeist</a> truck… get it at a 5-finger discount! <a href="http://MacHeist.com">http://MacHeist.com</a></p>
+<div class="entry-content"><p>Not a full-on post, but more a note for myself to both investigate and test this&hellip; It would seem that Vagrant has now added provisioner support for Docker [here] (<a href="https://docs.vagrantup.com/v2/provisioning/docker.html">https://docs.vagrantup.com/v2/provisioning/docker.html</a>).  Be looking for a new post on this in the near future!</p>
+
+<p>I&rsquo;m working steadily to start off the new year, so my posting may be somewhat sporadic, but I will continue to blog Puppet fundamentals, supporting tools, and related items as I have the chance.</p>
+
+<p>And in that vein, I encountered something this week I wanted to share with you.</p>
+
+<p>It would seem that the new feature whereby you can include facter facts in a module for pluginsync to distribute them, but using the new mechanism of:</p>
+
+<p>/<modulename>/facts.d/<external_fact></p>
+
+<p>is not 100% reliable when distributing those facts.  By this, I mean the following observed behavior.</p>
+
+<ol>
+<li>You create your fact and place it in the above directory.  Say, a shell script that gives you a value.</li>
+<li>You make your fact executable, and running it natively at the shell works perfectly.</li>
+<li>You do a puppet agent run, and the fact syncs to the agent machine, but never becomes available in the facter table.</li>
+<li>You find the sync&#8217;ed location of the fact (in the losgs from the sync) and run it manually, and it works perfectly.</li>
+</ol>
+
+
+<p>I spoke with some folks at Puppet just in a conversation describing what I was seeing and they suggested the following workaround:</p>
+
+<p>Make the fact a file resource and place the fact in /etc/puppetlabs/facter/facts.d.  This makes the fact available to the facter system, and displays correctly in the facter table and responds to the facter -p <factname> as expected.</p>
+
+<p>That&rsquo;s it for now!  Look for more to come on workflows and tools in the very near future.</p>
 </div>
 
 
@@ -117,7 +140,7 @@
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">questy</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Jerald Sheets</span></span>
 
       
 
@@ -131,12 +154,12 @@
   
 
 
-<time datetime="2010-02-26T12:14:04-06:00" pubdate data-updated="true"></time>
+<time datetime="2015-01-15T20:31:59-06:00" pubdate data-updated="true"></time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/geekstuff/'>geekstuff</a>
+    <a class='category' href='/blog/categories/geekstuff/'>geekstuff</a>, <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/puppet/'>puppet</a>
   
 </span>
 
@@ -145,7 +168,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.questy.org/blog/2010/02/26/wow-squeeze-for-mac-9-95-a/" data-via="" data-counturl="http://www.questy.org/blog/2010/02/26/wow-squeeze-for-mac-9-95-a/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.questy.org/blog/2015/01/15/vagrant-and-docker-love/" data-via="" data-counturl="http://www.questy.org/blog/2015/01/15/vagrant-and-docker-love/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -158,10 +181,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2010/02/10/so-i-just-tied-my-twitter-to/" title="Previous Post: So, I just tied my Twitter to ...">&laquo; So, I just tied my Twitter to &#8230;</a>
+        <a class="basic-alignment left" href="/blog/2015/01/08/moving-my-tech-content-to-github/" title="Previous Post: Moving my Tech Content to GitHub">&laquo; Moving my Tech Content to GitHub</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2010/08/05/ldap-authentication-for-apache/" title="Next Post: LDAP Authentication IV - Apache">LDAP Authentication IV - Apache &raquo;</a>
       
     </p>
   </footer>
@@ -336,8 +357,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://www.questy.org/blog/2010/02/26/wow-squeeze-for-mac-9-95-a/';
-        var disqus_url = 'http://www.questy.org/blog/2010/02/26/wow-squeeze-for-mac-9-95-a/';
+        var disqus_identifier = 'http://www.questy.org/blog/2015/01/15/vagrant-and-docker-love/';
+        var disqus_url = 'http://www.questy.org/blog/2015/01/15/vagrant-and-docker-love/';
         var disqus_script = 'embed.js';
       
     (function () {

@@ -4,7 +4,7 @@
   <title><![CDATA[Questy.org]]></title>
   <link href="http://www.questy.org/atom.xml" rel="self"/>
   <link href="http://www.questy.org/"/>
-  <updated>2015-01-15T20:28:01-06:00</updated>
+  <updated>2015-01-15T20:50:21-06:00</updated>
   <id>http://www.questy.org/</id>
   <author>
     <name><![CDATA[Jerald Sheets]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Vagrant and Docker Love]]></title>
+    <link href="http://www.questy.org/blog/2015/01/15/vagrant-and-docker-love/"/>
+    <updated>2015-01-15T20:31:59-06:00</updated>
+    <id>http://www.questy.org/blog/2015/01/15/vagrant-and-docker-love</id>
+    <content type="html"><![CDATA[<p>Not a full-on post, but more a note for myself to both investigate and test this&hellip; It would seem that Vagrant has now added provisioner support for Docker [here] (<a href="https://docs.vagrantup.com/v2/provisioning/docker.html">https://docs.vagrantup.com/v2/provisioning/docker.html</a>).  Be looking for a new post on this in the near future!</p>
+
+<p>I&rsquo;m working steadily to start off the new year, so my posting may be somewhat sporadic, but I will continue to blog Puppet fundamentals, supporting tools, and related items as I have the chance.</p>
+
+<p>And in that vein, I encountered something this week I wanted to share with you.</p>
+
+<p>It would seem that the new feature whereby you can include facter facts in a module for pluginsync to distribute them, but using the new mechanism of:</p>
+
+<p>/<modulename>/facts.d/<external_fact></p>
+
+<p>is not 100% reliable when distributing those facts.  By this, I mean the following observed behavior.</p>
+
+<ol>
+<li>You create your fact and place it in the above directory.  Say, a shell script that gives you a value.</li>
+<li>You make your fact executable, and running it natively at the shell works perfectly.</li>
+<li>You do a puppet agent run, and the fact syncs to the agent machine, but never becomes available in the facter table.</li>
+<li>You find the sync&#8217;ed location of the fact (in the losgs from the sync) and run it manually, and it works perfectly.</li>
+</ol>
+
+
+<p>I spoke with some folks at Puppet just in a conversation describing what I was seeing and they suggested the following workaround:</p>
+
+<p>Make the fact a file resource and place the fact in /etc/puppetlabs/facter/facts.d.  This makes the fact available to the facter system, and displays correctly in the facter table and responds to the facter -p <factname> as expected.</p>
+
+<p>That&rsquo;s it for now!  Look for more to come on workflows and tools in the very near future.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Moving my Tech Content to GitHub]]></title>
@@ -418,7 +451,7 @@ to read about a specific subcommand or concept.</code></pre></noscript></div>
 <p>Since Git is personal to you as a user, you need to let Git know a few things about you.  This gives your git server (in our case GitHub) the information it needs when you&rsquo;re pushing code (like your identity, default commit locations, etc).  First, your name and email:</p>
 
 <p>git config &ndash;global user.name &ldquo;John Doe&rdquo;
-git config &ndash;global user.email <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#x79;&#111;&#117;&#x40;&#x79;&#x6f;&#117;&#x72;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#109;">&#121;&#111;&#117;&#x40;&#121;&#x6f;&#x75;&#114;&#109;&#97;&#105;&#108;&#46;&#99;&#x6f;&#x6d;</a></p>
+git config &ndash;global user.email <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#x79;&#111;&#x75;&#x40;&#121;&#x6f;&#x75;&#x72;&#109;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#109;">&#x79;&#111;&#117;&#x40;&#121;&#x6f;&#117;&#x72;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;</a></p>
 
 <p>You&rsquo;ll only need to perform this once.  There are quite a few options and you can read up on those <a href="http://git-scm.com/book/en/Getting-Started-First-Time-Git-Setup">here</a> at your leisure.</p>
 
@@ -1411,29 +1444,6 @@ sudo yum-config-manager &ndash;enable rhel-6-server-optional-rpms</strong></em>
 <p><a href="http://cvquesty.github.io/images/Perl-Mongers-Puppet-PresentationTraining.pdf">Perl Mongers Puppet Presentation:Training</a></p>
 
 <p>I hope to see you there!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Puppetry Arts...]]></title>
-    <link href="http://www.questy.org/blog/2013/09/06/puppetry-arts/"/>
-    <updated>2013-09-06T13:45:35-05:00</updated>
-    <id>http://www.questy.org/blog/2013/09/06/puppetry-arts</id>
-    <content type="html"><![CDATA[<p>I guess you Atlanta folk will get that one&hellip; :)</p>
-
-<p>Howdy all, and a hearty hello.  I&rsquo;m back from my exile to the land of single shiny glowing buttons and happiness, rainbows, and OSX, and have returned to Atlanta with SysAdmin bells on.  I&rsquo;ve done a lot over the last couple years (much I cannot talk about), but have developed quite an affinity for the Puppet configuration Management system.  So much so, in fact, that I&rsquo;ve found a need to start a whole new category right here on the ol&#8217; blog to accommodate.</p>
-
-<p>Not in a long time have I liked something &ldquo;new&rdquo; that has come along to SysAdmin work&hellip; The moniker &ldquo;Devops&rdquo; still gives me hives, but I will endeavor to navigate the puppet-y waters without uttering the vile mantra but wading into the wonderful waters of automation and  managed infrastructure.</p>
-
-<p>In short, &ldquo;Puppet&rdquo; in and of itself is quite a feat of engineering.  A series of platform tools to enforce a single &ldquo;blessed&rdquo; configuration upon your infrastructure in a consistent, premeditated way from a central location, eliminating the need for all manner of scripting and &ldquo;loop lists&rdquo; to do individual functions on each system, one at a time.  No no!</p>
-
-<p>Puppet enforces policies you write in a uniform, secure way, rather quickly and scales rather well for most environments.  For the larger environments that cannot be scaled to, Puppet will utilize other &ldquo;workhorse&rdquo; industry standard products as modular replacements of various pieces of the Puppet system, to broaden and expand its abilities.</p>
-
-<p>Puppet comes in two flavors, the commercial &ldquo;Enterprise&rdquo; system where everything is packaged together and all gets installed and configured at load time in an &ldquo;automagical&rdquo; sort of way so you don&rsquo;t have any need to post-configure, but can just begin writing configurations immediately.</p>
-
-<p>The &ldquo;Open Source&rdquo; Puppet has most of the same pieces, although named somewhat differently, and you can build a very solid, full-featured system of your own without the price tag.  All you need is time.  :)</p>
-
-<p>In the coming sections, I will take apart Puppet for those of you wishing to know more, and give a rudimentary survey of all the different things it can do.  Hope you come along!</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: linux | Questy.org]]></title>
   <link href="http://www.questy.org/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://www.questy.org/"/>
-  <updated>2015-01-15T20:28:01-06:00</updated>
+  <updated>2015-01-15T20:50:21-06:00</updated>
   <id>http://www.questy.org/</id>
   <author>
     <name><![CDATA[Jerald Sheets]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Vagrant and Docker Love]]></title>
+    <link href="http://www.questy.org/blog/2015/01/15/vagrant-and-docker-love/"/>
+    <updated>2015-01-15T20:31:59-06:00</updated>
+    <id>http://www.questy.org/blog/2015/01/15/vagrant-and-docker-love</id>
+    <content type="html"><![CDATA[<p>Not a full-on post, but more a note for myself to both investigate and test this&hellip; It would seem that Vagrant has now added provisioner support for Docker [here] (<a href="https://docs.vagrantup.com/v2/provisioning/docker.html">https://docs.vagrantup.com/v2/provisioning/docker.html</a>).  Be looking for a new post on this in the near future!</p>
+
+<p>I&rsquo;m working steadily to start off the new year, so my posting may be somewhat sporadic, but I will continue to blog Puppet fundamentals, supporting tools, and related items as I have the chance.</p>
+
+<p>And in that vein, I encountered something this week I wanted to share with you.</p>
+
+<p>It would seem that the new feature whereby you can include facter facts in a module for pluginsync to distribute them, but using the new mechanism of:</p>
+
+<p>/<modulename>/facts.d/<external_fact></p>
+
+<p>is not 100% reliable when distributing those facts.  By this, I mean the following observed behavior.</p>
+
+<ol>
+<li>You create your fact and place it in the above directory.  Say, a shell script that gives you a value.</li>
+<li>You make your fact executable, and running it natively at the shell works perfectly.</li>
+<li>You do a puppet agent run, and the fact syncs to the agent machine, but never becomes available in the facter table.</li>
+<li>You find the sync&#8217;ed location of the fact (in the losgs from the sync) and run it manually, and it works perfectly.</li>
+</ol>
+
+
+<p>I spoke with some folks at Puppet just in a conversation describing what I was seeing and they suggested the following workaround:</p>
+
+<p>Make the fact a file resource and place the fact in /etc/puppetlabs/facter/facts.d.  This makes the fact available to the facter system, and displays correctly in the facter table and responds to the facter -p <factname> as expected.</p>
+
+<p>That&rsquo;s it for now!  Look for more to come on workflows and tools in the very near future.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Toolbox Grows...]]></title>
@@ -368,7 +401,7 @@ to read about a specific subcommand or concept.</code></pre></noscript></div>
 <p>Since Git is personal to you as a user, you need to let Git know a few things about you.  This gives your git server (in our case GitHub) the information it needs when you&rsquo;re pushing code (like your identity, default commit locations, etc).  First, your name and email:</p>
 
 <p>git config &ndash;global user.name &ldquo;John Doe&rdquo;
-git config &ndash;global user.email <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#121;&#x6f;&#117;&#64;&#121;&#111;&#x75;&#114;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#x79;&#x6f;&#x75;&#64;&#x79;&#111;&#x75;&#114;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;</a></p>
+git config &ndash;global user.email <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#58;&#121;&#111;&#117;&#64;&#x79;&#111;&#x75;&#x72;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x79;&#111;&#x75;&#64;&#121;&#x6f;&#117;&#x72;&#x6d;&#97;&#x69;&#108;&#x2e;&#x63;&#111;&#109;</a></p>
 
 <p>You&rsquo;ll only need to perform this once.  There are quite a few options and you can read up on those <a href="http://git-scm.com/book/en/Getting-Started-First-Time-Git-Setup">here</a> at your leisure.</p>
 
@@ -525,117 +558,6 @@ GitHub Help</a></p>
 <p>This will instruct vim to syntax highlight, and to be aware of any highlighting plugins that may live in the .vim plugin folder.  Next, place <a href="http://questy.org/stuff/puppet/puppet.vim">this file</a> into your .vim plugin directory.  If it does not yet exist, create it.  It lives in ~/.vim/plugin.  Once you load up new puppet manifests, it will recognize the type and begin to highlight the code according to the defined convention from the puppet.vim file you just downloaded.  If you have any issues, look at the vim plugin reference <a href="http://vimdoc.sourceforge.net/htmldoc/usr_05.html">here</a>.</p>
 
 <p>Now you&rsquo;re ready to work with Puppet files like a pro!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Vim]]></title>
-    <link href="http://www.questy.org/blog/2014/05/02/vim/"/>
-    <updated>2014-05-02T14:56:54-05:00</updated>
-    <id>http://www.questy.org/blog/2014/05/02/vim</id>
-    <content type="html"><![CDATA[<p><strong>Old School</strong></p>
-
-<p>Why on earth am I starting with Vim?  (or &ldquo;vi&rdquo; for you old folks)</p>
-
-<p>Vim is the modern &ldquo;vi&rdquo; implementation.  A full-screen text editor with a myriad of options and abilities for beyond anything I could ever cover here.  But Vim has one thing going for it that no other text editor has.  One simple fact about it puts it in the category of cameras.  You know the old saying?</p>
-
-<p><em><strong>&ldquo;The best camera is the one you have with you.&rdquo;</strong></em></p>
-
-<p>Thus it is with vi/vim.  It&rsquo;s literally <strong>everywhere.</strong></p>
-
-<p>Every UNIX OS, commercial or not, streamlined or not, old or new, has vi or vim installed on it.  Emacs is a great product, but it just isn&rsquo;t installed by default everywhere.  Regardless of the editor you refer to, ${INSERT_EDITOR_HERE} just isn&rsquo;t as ubiquitous as Vi/Vim.</p>
-
-<p>Since we&rsquo;re talking about a modern pursuit and workflow (DEVOPS), we&rsquo;ll be talking mostly about Vim&rsquo;s capabilities and features.</p>
-
-<p><strong>What Vim is <em>NOT</em></strong></p>
-
-<p>Vim is not a word processor.  You won&rsquo;t be writing business letters with it.  Vim is not for writing resumes, making pretty newsletters, or for typesetting a magazine.  The die-hard Vi/Vim fan will tell you that you can do all of the above with it, but that falls into the same category as filling in the Grand Canyon with a teaspoon. You <em>can </em>do it, but why on earth would you want to?</p>
-
-<p><strong>What Vim Does Best</strong></p>
-
-<p>Vim edits text.  Plain&hellip;text.  Not pretty bold, italicized, with all sorts of alignment characters and strange paragraphs and pagination doohickeys&hellip; no, Vim just makes text files.  Text files that are SO devoid of bells and whistles, in fact, that when you open a Vim created file in your favorite WYSIWYG editor, you&rsquo;ll see what appears to be a pile of letters and such all crammed together like you had nothing else on your keyboard but letters, numbers, and punctuation.</p>
-
-<p>Vim allows you to eliminate all the cruft and get right down to the matter of creating plain, unencumbered text files.</p>
-
-<p><strong>Why Does it Matter?</strong></p>
-
-<p>When you&rsquo;re logged onto your favorite Linux through two bastion hosts across several continents and have latency to boot, WordPad will not help.  You&rsquo;ll need a lightweight text editor within which you can load, edit, and save the single most numerous type of item on a UNIX system&hellip; a text file.</p>
-
-<p><strong>Where Can I learn More About Vim?</strong></p>
-
-<p>Vim&rsquo;s main project page can be found <a href="http://www.vim.org">here</a> online.  The main page has links to documentation and various community links as well as connections to various types of plugins and add ons you can use with Vim for any number of tasks.  You can join online forums, mailing lists, and communities whose entire purpose is the extension and promotion of Vim.  But that&rsquo;s not what we&rsquo;re up to&hellip;</p>
-
-<p><strong>How We Will Use Vim</strong></p>
-
-<p>For our purposes, we will use vim as code editor.  No more, no less.  Vim&rsquo;s abilities can help us <em>see </em>our code in ways that let&rsquo;s us know when there&rsquo;s an issue and can direct us generally in the direction of our solutions.  So, let&rsquo;s dive in to a minor Vim tutorial.  (If you&rsquo;re an advanced Vim user, stick with me&hellip;)</p>
-
-<p>All Linux distributions and Mac OSX come with Vim pre-installed and ready for action.  Note that some distributions of Linux will have <em>both </em>Vim and Vi.  You will either need to get into the habit of running &ldquo;vim&rdquo; from the command line, or setup your shell aliases to load Vim every time you type &ldquo;vi&rdquo; instead.</p>
-
-<p>When you launch Vim, you see a screen much like the following.  I use Mac OSX, but the effect is the same, regardless of platform.</p>
-
-<p><a href="http://cvquesty.github.io/images/vim.png"><img src="http://cvquesty.github.io/images/vim.png" alt="vim_screen" /></a></p>
-
-<p>I have several features turned on (including the line across the bottom that provides me a lot of information about the file I&rsquo;m editing), but the main things we will talk about here are <em>syntax highlighting</em> and <em>plugins </em>after a short tutorial on how Vim works.</p>
-
-<p><strong>I Can&rsquo;t DO Anything!!!</strong></p>
-
-<p>Most people&rsquo;s frustrations begin right on this page.  From here, nothing seems familiar.  I can&rsquo;t pull down a menu and I can&rsquo;t really even choose &ldquo;exit&rdquo; from a list of things to do.  The only real hint I have is on the screen above:</p>
-
-<p>type  :q<Enter>               to exit</p>
-
-<p>&hellip;which is quite a peculiar directive.  Why do I have to type a colon?  What does it mean?  And goodness help you if you already managed to type something into the screen.  The instructions you see above disappear, and without the right collection of keystrokes, you&rsquo;re not getting out of Vim.  You&rsquo;ll most likely just close the window and start looking for &ldquo;notepad&rdquo;.</p>
-
-<p>Here&rsquo;s where the tutorial starts.</p>
-
-<p>Vim is what is known as a full-screen text editor.  It started back in the Amiga days, and was first released publicly in 1991.  Before Vi/Vim, to create text files, there were line-based text editors that only allowed you to see one line of a file at a time.  So, you really couldn&rsquo;t work with huge files&hellip;it would be difficult to see file lines compared to each other or look at the whole flow of a subroutine you had written, or even to match wording or syntax from one section to another.</p>
-
-<p>Enter the full-screen editor.</p>
-
-<p>What the full-screen editor did was open a file on disk, reserving space in memory to hold the entire file, and then display to you a &ldquo;window&rdquo; into your file equal to your terminal&rsquo;s display size.  for instance, I have a terminal right now that has a several thousand line file open.  Of that file, I can only see 25 lines and 80 columns wide.  This &ldquo;window&rdquo; onto my file is something I personally configured in my terminal program (in my case, &ldquo;iTerm&rdquo;).  I can scroll up and down this file, sliding forward or backward within the file from the beginning to the end (just as you may an MS Word document) and can interact with/edit any character I can see on the screen.  (we&rsquo;ll talk about search and replace and other such things later).</p>
-
-<p>We are currently in what is known as &ldquo;command mode&rdquo;.  Many would ask why you don&rsquo;t just call this &ldquo;view&rdquo; mode, and the reasons are very simple.  From this screen, you issue MANY commands to Vim and tell it how you want it to behave for you.  For our purposes, we will use &ldquo;command&rdquo; mode and &ldquo;insert&rdquo; mode mostly.</p>
-
-<p><strong>Well, How Do I Edit Something?</strong></p>
-
-<p>To edit your file, you enter into a mode known as &ldquo;insert&rdquo; mode.  From this page there are several different modes you can enter, but &ldquo;insert&rdquo; mode is the easiest.  You simply type a single lowercase &ldquo;i&rdquo; to enter this mode.  When you do so, a cursor appears on the top line of the page you are viewing, and you are now able to type all you like.  Letters, <enter> keys, tabs&hellip; all normal typing idioms are available to you from this point.  How, you may ask, then do you save your work to disk?  I&rsquo;m in this &ldquo;insert&rdquo; mode and don&rsquo;t know how to save!</p>
-
-<p>Think about what you wish to accomplish&hellip; you wish to issue the command &ldquo;save&rdquo; to Vim.  Command&hellip;  as in&hellip; &ldquo;command mode&rdquo;, perhaps?  Well, we have to go back into command mode, then, so we can issue some commands to Vim and exit the program.</p>
-
-<p>Any time you are in Vim, your &ldquo;saving grace&rdquo; is your [esc] key.  Two taps on the escape key lways brings you back to command mode from anywhere.  Go ahead and try it.</p>
-
-<p>You&rsquo;ll now notice you have returned to &ldquo;command mode&rdquo; just as you were when you first opened Vim.  The only difference is that everything you typed is now on your screen and has not gone away.  Your &ldquo;edit buffer&rdquo; is full of a file you now can do things with.  You can save it, delete it, save it out as a specific file name&hellip; a myriad of normal file operations you may be used to from other software packages.</p>
-
-<p>In our case, we want to just save the file.  However, when we opened Vim, we didn&rsquo;t specify a file name to edit, we just opened Vim.  So, for all intents and purposes, we have an open buffer full of &ldquo;stuff&rdquo; and no file name to associate with it.  What we want to do now is to &ldquo;write&rdquo; the file to disk.  To do so, we have to issue commands to Vim in Command mode.</p>
-
-<p><strong>Command Mode</strong></p>
-
-<p>To issue commands to Vim, we have to tell it we are issuing it a command, otherwise you may hit a letter than means something else.  Recall that simply by hitting a lowercase &ldquo;i&rdquo; we placed vim into insert mode and then by hitting the [esc] key twice, we left it.  Clearly, there&rsquo;s more to this editor than we can readily see, so how do we save the file?</p>
-
-<p>When you have a buffer with text you would like to save, you have to first hit a colon &ldquo;:&rdquo;.  You&rsquo;ll notice that Vim places the colon on the bottom line of your screen to the left, awaiting a command.  While there are several commands we can perform here (as well as joining multiple commands together), we will simply write the file right now.  To do so, while at the &ldquo;colon prompt&rdquo;, we simply type:</p>
-
-<p><strong>: w foo.txt</strong></p>
-
-<p>and press the &ldquo;enter&rdquo; key.  You will receive a message on the last line that lets you know the file has been written to disk:</p>
-
-<p><strong>&ldquo;foo.txt&rdquo; [New] 1L, 16C written</strong></p>
-
-<p>But I&rsquo;m still in Vim.  What do I do now?</p>
-
-<p>Just like &ldquo;w&rdquo; is a command, exiting the program also is a command.  Guessably so, it is the letter &ldquo;q&rdquo; for &ldquo;quit&rdquo;.  So, as before, you hit the colon key, then the letter q, and then the enter key.  If all goes well, you&rsquo;ll be back at the command line.</p>
-
-<p><strong>Much More to This</strong></p>
-
-<p>Were I to do this for all the features of Vim, I&rsquo;d be writing a book.  However, fortunately for you, there are several tutorials and cheat sheets on Vi/Vim all over the Internet.  Here are a few of my favorites.</p>
-
-<p><a href="http://vim.wikia.com/wiki/Tutorial">The Main Vim Tutorial
-</a><a href="https://www.linux.com/learn/tutorials/228600-vim-101-a-beginners-guide-to-vim">Linux.com&rsquo;s Vim Tutorial</a></p>
-
-<p>As well as some cheat sheets for you to refer to for quick reference on the various commands available when using Vim:</p>
-
-<p><a href="http://www.viemu.com/vi-vim-cheat-sheet.gif">One of My Favorites
-</a><a href="http://vim.rtorr.com">Another Good Cheat Sheet</a></p>
-
-<p>Take some time learning the basics of Vim before pressing on to the next article: &ldquo;Customizing Vim&rdquo;.</p>
 ]]></content>
   </entry>
   
