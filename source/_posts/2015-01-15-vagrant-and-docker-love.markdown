@@ -5,7 +5,7 @@ date: 2015-01-15 20:31:59 -0600
 comments: true
 categories: [Linux, Puppet, Geekstuff]
 ---
-Not a full-on post, but more a note for myself to both investigate and test this... It would seem that Vagrant has now added provisioner support for Docker [here] (https://docs.vagrantup.com/v2/provisioning/docker.html).  Be looking for a new post on this in the near future!
+Not a full-on post, but more a note for myself to both investigate and test this... It would seem that Vagrant has now added provisioner support for Docker [here](https://docs.vagrantup.com/v2/provisioning/docker.html).  Be looking for a new post on this in the near future!
 
 I'm working steadily to start off the new year, so my posting may be somewhat sporadic, but I will continue to blog Puppet fundamentals, supporting tools, and related items as I have the chance.
 
