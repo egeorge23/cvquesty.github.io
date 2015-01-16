@@ -39,7 +39,7 @@ Git itself is available on most modern platforms and can easily hook into GitHub
 When you install git on your unix-like platform, it will drop a few binaries.  The one we're most interested in is the git binary itself.  It's very simply designed and has a very straightforward set of options you can get from the command line by simply typing "git" with no options, or "git help".  The output is below:
 
 
-[snippet id="32"]
+{% gist 20c92f9743e7a1b18ff6 %}
 
 
 
