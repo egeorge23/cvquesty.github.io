@@ -13,7 +13,7 @@ And in that vein, I encountered something this week I wanted to share with you.
 
 It would seem that the new feature whereby you can include facter facts in a module for pluginsync to distribute them, but using the new mechanism of:
 
-/<modulename>/facts.d/<external_fact>
+/modulename/facts.d/external_fact
 
 is not 100% reliable when distributing those facts.  By this, I mean the following observed behavior.
 
