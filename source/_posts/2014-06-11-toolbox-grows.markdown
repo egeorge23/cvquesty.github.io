@@ -64,16 +64,13 @@ vagrant up
 
 If your Vagrant is installed correctly, a number of things start to happen.  First, Vagrant places a file in your cwd called "Vagrantfile".  Your vagrant file (indie) looks like this:
 
-
-[snippet id="34"]
-
-
+{% gist 57647667b0b5ccf32c2a %}
 
 
 Note that this is a long file with a lot of explanatory documentation.  In actuality, the most important part of your Vagrantfile can be summed up here:
 
+{% gist 58af9e3c724cac754987 %}
 
-[snippet id="35"]
 
 These are the lines that are uncommented plus the top two declaratives that tell Vagrant what to do.  It's a very simple file that does some very powerful things.  First, it checks your home directory in the ~/.vagrant.d location to see if you already have the "precise32" Vagrant source "box".  (more on boxes later).  Next, if you do have this, it will simply start up a VM in your virtualization of choice with a randomized name.  For instance, mine is called "precise32_default_1402504453444_30545".  Vagrant takes away the selection of an .iso image, connecting it to the virtual CD/DVD Rom, starting an installer, etc.  It simply sends you a pre-rolled image, places it in your .vagrant.d directory, and provisions the VM to respond to Vagrant commands, and starts it up within Virtualbox.  Precise32 is simply a test scenario, as Vagrant's site has quite a number of varied and specially configured "box" files that you can use to prototype on at their "ready-made" box discovery site: https://vagrantcloud.com/discover/featured.  You can install boxes with too many variations and differentiations to enumerate here, and that's not really the point for our purposes... you may find these of great assistance in your own workplace, but let's continue.
 
